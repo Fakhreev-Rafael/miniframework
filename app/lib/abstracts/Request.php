@@ -23,6 +23,13 @@ abstract class Request {
     protected $path;
 
     /**
+     * Has
+     * 
+     * @var array $parameters
+     */
+    private $parameters = [];
+
+    /**
      * Defines method of current request
      * Also takes path of its uri
      * And calls handler
@@ -56,6 +63,17 @@ abstract class Request {
     public function path() {
 
         return $this->path;
+
+    }
+    
+    /**
+     * Returns parameters of current request if they exist else returns empty array
+     * 
+     * @return array
+     */
+    public function parameters(): array{
+
+        return $this->parameters;
 
     }
 
