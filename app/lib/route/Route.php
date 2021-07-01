@@ -43,8 +43,8 @@ class Route {
      * @param string $action
      * @param array $namesOfSlugs
      */
-    public static function POST(string $route, string $controller, string $action, array $slugsNames = []) {
-        self::handler('POST', $route, $controller, $action, $slugsNames);
+    public static function POST(string $route, string $controller, string $action) {
+        self::handler('POST', $route, $controller, $action);
     }
 
     /**
