@@ -7,6 +7,7 @@ use app\lib\abstracts\Request;
 /**
  * class GETRequest has information about GET request
  * its method, path of uri, parameters
+ * extends final class Request
  */
 class GETRequest extends Request {
 
