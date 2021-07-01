@@ -30,6 +30,13 @@ abstract class Request {
     private $parameters = [];
 
     /**
+     * Has slugs of current request uri if they exist else has empty array
+     * 
+     * @var array $slugs
+     */
+    private $slugs = [];
+
+    /**
      * Defines method of current request
      * Also takes path of its uri
      * And calls handler
@@ -74,6 +81,28 @@ abstract class Request {
     public function parameters(): array{
 
         return $this->parameters;
+
+    }
+
+    /**
+     * Sets slugs if current request 
+     * 
+     * @param array $slugs
+     */
+    public function setSlugs(array $slugs) {
+
+        $this->slugs = $slugs;
+
+    }
+
+    /**
+     * Returns slugs of current request if they set else returns empty array
+     * 
+     * @return array
+     */
+    public function slugs(): array{
+
+        return $this->slugs;
 
     }
 
